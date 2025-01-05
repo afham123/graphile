@@ -1,0 +1,23 @@
+1. Generates a SQL files by db-migrate in the migration folder, 
+npx db-migrate create create-table-preson --sql-file
+
+2. Create a .db-migraterc file in the root of the project, to pass the following configuration:
+{
+  "sql-file": true
+}
+
+
+3. Use this configuration in the database.json
+{
+  "dev": {
+    "driver": "pg",
+    "host": "localhost",
+    "port": 5432,
+    "user": "your_username",
+    "password": "your_password",
+    "database": "your_database",
+    "sql-file": true
+  }
+}
+
+4. npx db-migrate up --verbose

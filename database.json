@@ -1,0 +1,12 @@
+{
+    "dev" : {
+        "driver" : "pg",
+        "host": "localhost",
+        "database" : "learn_dev",
+        "password": "password",
+        "port": 5432,
+        "user": "postgres",
+        "sql-file": true
+    }
+}
+  

@@ -1,0 +1,50 @@
+before adding @graphile-contrib/pg-simplify-inflector plugin
+
+# Query to get all the peoples. 
+query PeopleQuery {
+  allPeople {
+    nodes {
+      id firstName lastName
+    }
+  }
+}
+
+# Mutation to add a person
+mutation CreatePerson {
+  createPerson(input: {person: {firstName: "Aron", lastName: "Finch"}}) {
+    person {
+      id
+      firstName
+      lastName
+    }
+  }
+}
+
+# Mutation to update a person
+mutation UpdatePerson{
+  updatePersonById(input:{id:3,personPatch: {lastName:"Ahmad"}} ){
+    person {
+      firstName, lastName, id
+    }
+  }
+}
+
+# Mutation to delete a person.
+mutation DeletePerson{
+  deletePersonById(input: {id:6}) {
+    person{
+      firstName, lastName, id
+    }
+  }
+}
+
+
+After adding the plugin
+# Query to get all the peoples. 
+query PeopleQuery {
+  people{
+    nodes {
+      id firstName lastName
+    }
+  }
+}
