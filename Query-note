@@ -48,3 +48,46 @@ query PeopleQuery {
     }
   }
 }
+
+# Query for the card
+query CardQuery{
+  cards{
+    nodes {
+      answer, 
+      question, 
+      id, 
+      reviewAfter, 
+      spacing, 
+      easeFactor, 
+      archived, 
+      seq,
+      personId
+      person {
+        firstName lastName id
+      }
+    }
+  }
+}
+
+
+# create a card
+mutation CreateCard{
+  createCard(input:{
+    card:{
+      question : "what do you say hello in Spanish?",
+      answer: "hola"
+    }
+    
+  }){
+    card {
+      id
+      question 
+      answer
+      archived
+      reviewAfter
+      spacing
+      seq
+      personId      
+    }
+  }
+}

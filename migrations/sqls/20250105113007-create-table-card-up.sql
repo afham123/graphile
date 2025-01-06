@@ -22,15 +22,15 @@ COMMENT ON COLUMN learn.card.answer Is 'The answer to the question';
 COMMENT ON COLUMN learn.card.archived Is 'Indicated if the card is active or not';
 
 
-COMMENT ON COLUMN learn.card.seq Is '@omit create, update
+COMMENT ON COLUMN learn.card.seq Is '@omit create,update
 controls the order in which to review cards.';
-COMMENT ON COLUMN learn.card.ease_factor Is '@omit create, update
+COMMENT ON COLUMN learn.card.ease_factor Is '@omit create,update
 The ease at which the answer was last remembered';
-COMMENT ON COLUMN learn.card.spacing Is '@omit create, update
+COMMENT ON COLUMN learn.card.spacing Is '@omit create,update
 The current spacing in days between reviews';
-COMMENT ON COLUMN learn.card.review_after Is '@omit create, update
+COMMENT ON COLUMN learn.card.review_after Is '@omit create,update
 The next time the card should be reviewed';
-COMMENT ON COLUMN learn.card.person_id Is '@omit create, update
+COMMENT ON COLUMN learn.card.person_id Is '@omit create,update
 The creator/owner of this card';
-COMMENT ON COLUMN learn.card.created_at Is '@omit create, update
+COMMENT ON COLUMN learn.card.created_at Is '@omit create,update
 The time this card was created';
